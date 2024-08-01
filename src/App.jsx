@@ -56,6 +56,11 @@ const styles = {
 };
 
 const SalesPage = () => {
+
+  const linker = () => {
+    window.location.href = 'https://pay.kiwify.com.br/69hpGKF';
+  }
+
   useEffect(() => {
     // Configura o ScrollReveal
     ScrollReveal().reveal('.reveal', {
@@ -97,7 +102,7 @@ const SalesPage = () => {
           <li>Planos Focados: Exercícios e dicas específicas para tratar a gordura localizada no pescoço.</li>
           <li>Acesso Imediato: Baixe agora e comece a ver resultados em apenas 30 dias!</li>
         </ul>
-        <button style={styles.button}>ADQUIRA SEU EBOOK AGORA !</button>
+        <button style={styles.button} onClick={linker}>ADQUIRA SEU EBOOK AGORA !</button>
       </section>
 
       {/* Seção de Testemunhos */}
@@ -113,7 +118,7 @@ const SalesPage = () => {
         <p>
           Estamos tão confiantes de que você adorará nosso eBook que oferecemos uma garantia de 30 dias. Se você não estiver satisfeito com os resultados, devolvemos seu dinheiro sem perguntas.
         </p>
-        <button style={styles.button}>Experimente Sem Risco!</button>
+        <button style={styles.button} onClick={linker}>Experimente Sem Risco!</button>
       </section>
 
       {/* Seção de FAQ */}
@@ -133,7 +138,7 @@ const SalesPage = () => {
           <a href="https://instagram.com" style={{ color: '#003F6C' }}>Instagram</a> |
           <a href="https://twitter.com" style={{ color: '#003F6C' }}>Twitter</a>
         </p>
-        <button style={styles.button}>Baixe Agora e Reduza Sua Papada!</button>
+        <button style={styles.button} onClick={linker}>Baixe Agora e Elimine Sua Papada!</button>
       </footer>
     </div>
   );
