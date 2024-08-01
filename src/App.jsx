@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {api} from './api'
 import './App.css'
 import ScrollReveal from 'scrollreveal';
 import videoSrc from './assets/video.mp4'; // Atualize o caminho conforme necessário
@@ -56,6 +57,17 @@ const styles = {
 };
 
 const SalesPage = () => {
+
+  useEffect(() => {
+    const fetchAccessCount = async () => {
+      try {
+        const response = await api.get('/solucaoemagrece/api.php');
+      } catch (error) {
+        console.error('Error fetching access count:', error);
+      }
+    };
+    fetchAccessCount()
+  }, [])
 
   const linker = () => {
     window.location.href = 'https://pay.kiwify.com.br/69hpGKF';
